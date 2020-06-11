@@ -1,0 +1,127 @@
+// css-variables
+:root {
+  --test1: 2rem;
+  --colour1: tomato;
+  --colour2: #2abf2a;
+  --colour3: rgb(0, 207, 207);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: green;
+}
+
+h1 {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: lighter;
+  margin: 0;
+  font-size: var(--test1);
+  color: var(--colour1);
+  background-color: yellow;
+}
+
+h3 {
+  text-align: center;
+  font-size: var(--test1);
+}
+
+header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+  border-bottom: 1px solid black;
+  .logo {
+    position: relative;
+    height: 100%;
+    width: 200px;
+    border: 1px solid black;
+    transition: 0.5s ease;
+  }
+}
+
+header.smaller {
+  .logo {
+    width: 100px;
+  }
+}
+
+nav {
+  ul {
+    list-style: none;
+  }
+  li {
+    display: inline;
+  }
+}
+main {
+  position: relative;
+  width: 100%;
+  top: 10vh;
+  margin-bottom: 10vh;
+
+  .flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    border-bottom: 1px solid black;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 1px solid black;
+
+    .bild.one {
+      grid-column: auto;
+      border: 1px solid lime;
+    }
+    .bild.two {
+      grid-column: 2/3;
+      border: 1px solid yellow;
+    }
+    .bild.three {
+      grid-column: 3/4;
+      border: 1px solid blue;
+    }
+  }
+  .bild {
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 300px;
+    margin: 10px;
+    flex: 0 1 20%;
+  }
+  figcaption {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 20%;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    font-size: 50px;
+    transform: translate(-50%, -50%);
+  }
+}
+footer {
+  position: relative;
+  height: 10vh;
+  width: 100%;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+
+  .container {
+    background-color: yellow;
+  }
+}

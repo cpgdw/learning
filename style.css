@@ -1,0 +1,157 @@
+:root {
+  --test1: 2rem;
+  --colour1: tomato;
+  --colour2: #2abf2a;
+  --colour3: rgb(0, 207, 207);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: green;
+}
+
+h1 {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: lighter;
+  margin: 0;
+  font-size: var(--test1);
+  color: var(--colour1);
+  background-color: yellow;
+}
+
+h3 {
+  text-align: center;
+  font-size: var(--test1);
+}
+
+header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+  border-bottom: 1px solid black;
+}
+
+header .logo {
+  position: relative;
+  height: 100%;
+  width: 200px;
+  border: 1px solid black;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+header.smaller .logo {
+  width: 100px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  display: inline;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  top: 10vh;
+  margin-bottom: 10vh;
+}
+
+main .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-bottom: 1px solid black;
+}
+
+main .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 1px solid black;
+}
+
+main .grid .bild.one {
+  grid-column: auto;
+  border: 1px solid lime;
+}
+
+main .grid .bild.two {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  border: 1px solid yellow;
+}
+
+main .grid .bild.three {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  border: 1px solid blue;
+}
+
+main .bild {
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 300px;
+  margin: 10px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 20%;
+          flex: 0 1 20%;
+}
+
+main figcaption {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 20%;
+  text-align: center;
+  background-color: blue;
+  color: white;
+  font-size: 50px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+footer {
+  position: relative;
+  height: 10vh;
+  width: 100%;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+}
+
+footer .container {
+  background-color: yellow;
+}
+/*# sourceMappingURL=style.css.map */
